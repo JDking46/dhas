@@ -1,0 +1,21 @@
+backend/.venv/
+backend/__pycache__/
+backend/app/__pycache__/
+backend/*.db
+backend/.env
+*.log
+.DS_Store
+Thumbs.db# Python
+backend/.venv/
+backend/__pycache__/
+backend/**/*.pyc
+backend/.env
+backend/aurelia.db
+backend/.pytest_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/

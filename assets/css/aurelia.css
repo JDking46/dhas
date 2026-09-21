@@ -1,0 +1,470 @@
+/* ==========================================================================
+   AURELIA LUXE - PREMIUM BLACK + GOLD DESIGN SYSTEM
+   ========================================================================== */
+
+:root {
+  --bg-deep: #080808;
+  --bg-secondary: #111111;
+  --bg-card: #171717;
+  --bg-card-hover: #1e1e1e;
+  
+  --gold: #D4AF37;
+  --gold-bright: #F5D76E;
+  --gold-dark: #9C7A20;
+  --gold-subtle: rgba(212, 175, 55, 0.15);
+  --gold-border: rgba(212, 175, 55, 0.25);
+  --gold-glow: rgba(212, 175, 55, 0.35);
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #B8B8B8;
+  --text-muted: #737373;
+  
+  --success: #22C55E;
+  --error: #EF4444;
+  --warning: #F59E0B;
+  
+  --font-serif: 'Cinzel', 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Base resets & typography */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .font-serif-luxury {
+  font-family: var(--font-serif);
+  letter-spacing: 0.03em;
+}
+
+/* Custom Gold Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+/* Luxury Gold Gradients & Glows */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFF0B5 0%, #F5D76E 25%, #D4AF37 55%, #9C7A20 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-bright {
+  color: var(--gold-bright);
+}
+
+.text-gold {
+  color: var(--gold);
+}
+
+.text-gold-dark {
+  color: var(--gold-dark);
+}
+
+.bg-gold {
+  background-color: var(--gold);
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #F5D76E 0%, #D4AF37 50%, #9C7A20 100%);
+}
+
+.bg-gold-subtle {
+  background-color: var(--gold-subtle);
+}
+
+.border-gold {
+  border-color: var(--gold);
+}
+
+.border-gold-subtle {
+  border-color: var(--gold-border);
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px var(--gold-glow);
+}
+
+.gold-glow-sm {
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.2);
+}
+
+.gold-glow-hover:hover {
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Glassmorphic Cards & Panels */
+.card-luxe {
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-luxe:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+  background: var(--bg-card-hover);
+}
+
+.glass-panel {
+  background: rgba(23, 23, 23, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--gold-border);
+}
+
+/* Luxury Button System */
+.btn-gold {
+  background: linear-gradient(135deg, #F5D76E 0%, #D4AF37 50%, #9C7A20 100%);
+  color: #080808;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.65rem 1.4rem;
+  border-radius: 8px;
+  border: 1px solid #F5D76E;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gold:hover {
+  box-shadow: 0 0 20px rgba(245, 215, 110, 0.5);
+  transform: translateY(-1px);
+}
+
+.btn-gold:active {
+  transform: translateY(1px);
+}
+
+.btn-gold-outline {
+  background: transparent;
+  color: var(--gold-bright);
+  border: 1px solid var(--gold);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  padding: 0.6rem 1.3rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.25s ease;
+}
+
+.btn-gold-outline:hover {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: var(--gold-bright);
+  color: #FFFFFF;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+  transform: translateY(-1px);
+}
+
+.btn-dark {
+  background: #1e1e1e;
+  color: #FFFFFF;
+  border: 1px solid #333333;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.btn-dark:hover {
+  background: #282828;
+  border-color: var(--gold-border);
+}
+
+/* Badges */
+.badge-gold {
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--gold-bright);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-transform: uppercase;
+}
+
+.badge-verified {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Form Inputs */
+.input-luxe {
+  background-color: #121212;
+  border: 1px solid #2d2d2d;
+  color: #FFFFFF;
+  border-radius: 8px;
+  padding: 0.65rem 0.95rem;
+  width: 100%;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.input-luxe:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+  background-color: #171717;
+}
+
+.input-luxe::placeholder {
+  color: #666666;
+}
+
+/* Shimmer Loading Skeleton */
+.skeleton {
+  background: linear-gradient(90deg, #171717 25%, #242424 50%, #171717 75%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.8s infinite;
+  border-radius: 8px;
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Micro-animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pulseGold {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.animate-gold-pulse {
+  animation: pulseGold 3s infinite ease-in-out;
+}
+
+/* Interactive Product Image Zoom */
+.product-img-zoom {
+  transition: transform 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.card-luxe:hover .product-img-zoom {
+  transform: scale(1.06);
+}
+
+/* Custom range input */
+input[type=range] {
+  accent-color: var(--gold);
+}
+
+/* Bottom Nav on Mobile */
+.mobile-bottom-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-bottom-bar {
+    display: flex;
+  }
+}
+
+/* Mobile & Tablet Responsive Overrides */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  padding-bottom: 72px;
+}
+
+img, svg, video, canvas {
+  max-width: 100%;
+  display: block;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+#app-content {
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+#app-content > * {
+  max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+  body {
+    padding-bottom: 84px;
+  }
+
+  .max-w-7xl,
+  .max-w-6xl,
+  .max-w-5xl,
+  .max-w-4xl {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 96px;
+  }
+
+  #app-content {
+    padding-bottom: 0.5rem;
+  }
+
+  .max-w-7xl,
+  .max-w-6xl,
+  .max-w-5xl,
+  .max-w-4xl,
+  .w-full {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .mobile-bottom-bar {
+    display: flex !important;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    gap: 0.25rem;
+  }
+
+  .mobile-bottom-bar a {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .mobile-bottom-bar span {
+    line-height: 1.2;
+  }
+
+  h1,
+  .font-serif-luxury {
+    letter-spacing: 0.02em;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 8vw, 3rem) !important;
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 7vw, 2.5rem) !important;
+  }
+
+  h3 {
+    font-size: clamp(1.3rem, 5vw, 1.8rem) !important;
+  }
+
+  .text-xs,
+  .text-sm,
+  .text-base,
+  .text-lg,
+  .text-xl,
+  .text-2xl,
+  .text-3xl {
+    word-break: break-word;
+  }
+
+  .px-6,
+  .px-8,
+  .px-10,
+  .px-12,
+  .py-10,
+  .py-12,
+  .py-16 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .gap-6,
+  .gap-8,
+  .gap-10,
+  .gap-12 {
+    gap: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-bottom: 88px;
+  }
+
+  .mobile-bottom-bar {
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+  }
+
+  .mobile-bottom-bar .text\[10px\] {
+    font-size: 8.5px !important;
+  }
+
+  .btn-gold,
+  .btn-gold-outline,
+  .btn-dark {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Keep mobile nav from covering content */
+@media (max-width: 768px) {
+  .fixed.bottom-0 {
+    z-index: 40;
+  }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Aurelia Luxe | The World's Finest Handmade Marketplace</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Discover breathtaking handmade jewelry, ceramic stoneware, heirloom woodcraft, and botanical scents created by independent verified master artisans worldwide." />
+  <meta name="keywords" content="handmade, artisan, luxury marketplace, jewelry, filigree, ceramics, pottery, woodcraft, bespoke, master craftspeople" />
+  <meta property="og:title" content="Aurelia Luxe | Premium Handmade Marketplace" />
+  <meta property="og:description" content="Authentic handmade creations directly from independent master artisans." />
+  <meta property="og:type" content="website" />
+  
+  <!-- Google Fonts: Cinzel & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            deep: '#080808',
+            secondary: '#111111',
+            card: '#171717',
+            gold: {
+              DEFAULT: '#D4AF37',
+              bright: '#F5D76E',
+              dark: '#9C7A20',
+              subtle: 'rgba(212, 175, 55, 0.15)'
+            }
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Chart.js for Luxury Seller & Admin Analytics -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+  <!-- Custom Luxury Aurelia Stylesheet -->
+  <link rel="stylesheet" href="assets/css/aurelia.css" />
+</head>
+<body class="bg-[#080808] text-white min-h-screen flex flex-col selection:bg-[#D4AF37] selection:text-black">
+
+  <!-- Top Global Navigation -->
+  <div id="main-navbar"></div>
+
+  <!-- Dynamic Application Page Content -->
+  <main id="app-content" class="flex-1 w-full"></main>
+
+  <!-- Global Luxury Footer -->
+  <div id="main-footer"></div>
+
+  <!-- Mobile Drawer & Bottom Navigation Bar -->
+  <div id="mobile-nav-container"></div>
+
+  <!-- Toast Notification Portal -->
+  <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-3 max-w-sm w-full pointer-events-none px-4"></div>
+
+  <!-- Application Main Script -->
+  <script type="module" src="assets/js/app.js"></script>
+
+</body>
+</html>
